@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+streamlit
+langgraph
+langchain
+langchain-anthropic
+fastmcp
+pydantic
+requests
+asyncio

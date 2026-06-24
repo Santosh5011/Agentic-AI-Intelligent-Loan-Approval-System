@@ -1,0 +1,13 @@
+@echo off
+echo Installing dependencies from requirements.txt...
+pip install -r requirements.txt
+
+echo Starting FastAPI gateway layer...
+:: Start FastAPI in the background
+start /B python -m api.main
+
+echo Giving the API engine a second to boot up fully...
+timeout /t 3 /nobreak >nul
+
+echo Spinning up presentation panel view...
+streamlit run ui/app.py
